@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tugas 13</title>
+</head>
+<body>
+  <script>
+    function result () {
+      let value = Number(document.getElementById("isi").value)
+      let answ;
+      [value/3,
+        value/5,
+        value/15].forEach((tr, index) => !String(tr).includes('.') ? answ = index: void 0)
+      switch (answ) {
+        case 0:
+          answ = 'TI'
+          break
+        case 1:
+          answ = 'Unindra'
+          break
+        case 2:
+          answ = 'WEB'
+          break
+        default:
+          answ = ''
+        }
+        alert(answ)
+      }
+    </script>
+    <form>
+      <input id="isi" type="number" placeholder="Masukan Angka">
+      <button type="button" onclick="result()">Masukan</button>
+    </form>
+  </body>
+</html>
